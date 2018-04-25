@@ -5,4 +5,6 @@ import gdal
 
 f = gdal.Open(sys.argv[1])
 z = f.ReadAsArray()
+
+# print to stdout as integers
 np.savetxt(sys.stdout, z, fmt='%i')

@@ -3,6 +3,9 @@ import sys
 import numpy as np
 from matplotlib import pyplot as plt
 
+if len(sys.argv) != 3:
+    sys.exit('usage: python %s seasonality_strength no_years' % sys.argv[0])
+
 w = float(sys.argv[1])
 r = np.random.normal(size = 365 * int(sys.argv[2]))
 t = np.arange(len(r), dtype = 'float')
